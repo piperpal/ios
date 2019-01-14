@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F07456421EC3A0800596E25 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F07456321EC3A0800596E25 /* MapKit.framework */; };
 		7F9F489F21EC3680004B5B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F489E21EC3680004B5B3F /* AppDelegate.swift */; };
 		7F9F48A121EC3680004B5B3F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F48A021EC3680004B5B3F /* RootViewController.swift */; };
 		7F9F48A321EC3680004B5B3F /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F48A221EC3680004B5B3F /* DataViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F07456321EC3A0800596E25 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7F9F489B21EC3680004B5B3F /* Piperpal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piperpal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9F489E21EC3680004B5B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F9F48A021EC3680004B5B3F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F07456421EC3A0800596E25 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F07456221EC3A0800596E25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F07456321EC3A0800596E25 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F9F489221EC3680004B5B3F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 				7F9F48B621EC3681004B5B3F /* iosTests */,
 				7F9F48C121EC3681004B5B3F /* iosUITests */,
 				7F9F489C21EC3680004B5B3F /* Products */,
+				7F07456221EC3A0800596E25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +211,11 @@
 				TargetAttributes = {
 					7F9F489A21EC3680004B5B3F = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7F9F48B221EC3681004B5B3F = {
 						CreatedOnToolsVersion = 9.3.1;
