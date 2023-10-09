@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITextViewDelegate, CLLocationManagerDel
     let searchButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Search", for: .normal)
-        button.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+        button.addTarget(ViewController.self, action: #selector(searchButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -90,7 +90,7 @@ class ViewController: UIViewController, UITextViewDelegate, CLLocationManagerDel
     }
 
     // UITextViewDelegate method to handle clickable links
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
         UIApplication.shared.open(URL, options: [:], completionHandler: nil)
         return false
     }
@@ -130,7 +130,7 @@ class ViewController: UIViewController, UITextViewDelegate, CLLocationManagerDel
             return
         }
 
-        let urlString = "https://api.piperpal.com/location/json.php?service=Search&glat=" + latitude + "&glon=" + longitude + "&radius=1000&query=\(searchQuery)"
+        let urlString = "https://api.piperpal.com/location/json.php?service=Search&glat=\(latitude)&glon=\(longitude)&radius=1000&query=\(searchQuery)"
 
         if let url = URL(string: urlString) {
             let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
