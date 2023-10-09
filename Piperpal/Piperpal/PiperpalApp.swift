@@ -6,16 +6,20 @@
 //
 import SwiftUI
 import UIKit
+import CoreLocation
 
 // Define your UIKit ViewController
 
 struct LocationResult: Codable {
     // Define the properties based on the actual JSON structure
 }
-import UIKit
 
-class ViewController: UIViewController, UITextViewDelegate {
+class ViewController: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
 
+    let latitude = 60
+    let longitude = 10
+    let locationManager = CLLocationManager()
+    
     let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Logo") // Replace "your_logo" with the actual name of your logo image
@@ -51,7 +55,24 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         setupUI()
         resultTextView.delegate = self
+        setupLocationManager()
     }
+    
+    private func setupLocationManager() {
+         locationManager.delegate = self
+         locationManager.requestWhenInUseAuthorization()
+         locationManager.startUpdatingLocation()
+     }
+
+     // CLLocationManagerDelegate method to handle location updates
+     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+         guard let location = locations.last else { return }
+         let latitude = location.coordinate.latitude
+         let longitude = location.coordinate.longitude
+
+         // Use latitude and longitude in your API request or other logic
+         print("Current Location: \(latitude), \(longitude)")
+     }
     
     // Convert HTML string to NSAttributedString
     private func attributedString(from htmlString: String) -> NSAttributedString? {
@@ -109,7 +130,7 @@ class ViewController: UIViewController, UITextViewDelegate {
             return
         }
 
-        let urlString = "https://api.piperpal.com/location/json.php?service=Food&glat=60&glon=10&radius=1000&query=\(searchQuery)"
+        let urlString = "https://api.piperpal.com/location/json.php?service=Search&glat=" + latitude + "&glon=" + longitude + "&radius=1000&query=\(searchQuery)"
 
         if let url = URL(string: urlString) {
             let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
