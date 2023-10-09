@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4F92410F28C5D7FD00C6F549 /* PiperpalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92410E28C5D7FD00C6F549 /* PiperpalApp.swift */; };
-		4F92411128C5D7FD00C6F549 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92411028C5D7FD00C6F549 /* ContentView.swift */; };
 		4F92411328C5D7FF00C6F549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92411228C5D7FF00C6F549 /* Assets.xcassets */; };
 		4F92411628C5D7FF00C6F549 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92411528C5D7FF00C6F549 /* Preview Assets.xcassets */; };
-		4F92411828C5D7FF00C6F549 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92411728C5D7FF00C6F549 /* Persistence.swift */; };
 		4F92411B28C5D7FF00C6F549 /* Piperpal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F92411928C5D7FF00C6F549 /* Piperpal.xcdatamodeld */; };
 		4F92412528C5D7FF00C6F549 /* PiperpalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92412428C5D7FF00C6F549 /* PiperpalTests.swift */; };
 		4F92412F28C5D7FF00C6F549 /* PiperpalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92412E28C5D7FF00C6F549 /* PiperpalUITests.swift */; };
@@ -38,10 +36,8 @@
 /* Begin PBXFileReference section */
 		4F92410B28C5D7FD00C6F549 /* Piperpal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piperpal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F92410E28C5D7FD00C6F549 /* PiperpalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiperpalApp.swift; sourceTree = "<group>"; };
-		4F92411028C5D7FD00C6F549 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F92411228C5D7FF00C6F549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F92411528C5D7FF00C6F549 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4F92411728C5D7FF00C6F549 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4F92411A28C5D7FF00C6F549 /* Piperpal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Piperpal.xcdatamodel; sourceTree = "<group>"; };
 		4F92412028C5D7FF00C6F549 /* PiperpalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiperpalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F92412428C5D7FF00C6F549 /* PiperpalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiperpalTests.swift; sourceTree = "<group>"; };
@@ -99,9 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4F92410E28C5D7FD00C6F549 /* PiperpalApp.swift */,
-				4F92411028C5D7FD00C6F549 /* ContentView.swift */,
 				4F92411228C5D7FF00C6F549 /* Assets.xcassets */,
-				4F92411728C5D7FF00C6F549 /* Persistence.swift */,
 				4F92411928C5D7FF00C6F549 /* Piperpal.xcdatamodeld */,
 				4F92411428C5D7FF00C6F549 /* Preview Content */,
 			);
@@ -197,10 +191,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					4F92410A28C5D7FD00C6F549 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = "";
 					};
 					4F92411F28C5D7FF00C6F549 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -263,8 +258,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F92411828C5D7FF00C6F549 /* Persistence.swift in Sources */,
-				4F92411128C5D7FD00C6F549 /* ContentView.swift in Sources */,
 				4F92411B28C5D7FF00C6F549 /* Piperpal.xcdatamodeld in Sources */,
 				4F92410F28C5D7FD00C6F549 /* PiperpalApp.swift in Sources */,
 			);
@@ -307,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -340,6 +334,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -354,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -368,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -401,6 +397,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -409,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -427,7 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Piperpal/Preview Content\"";
-				DEVELOPMENT_TEAM = CJCK5GUH74;
+				DEVELOPMENT_TEAM = LP26VPXL28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -442,7 +439,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.piperpal.api.ios.Piperpal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -456,7 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Piperpal/Preview Content\"";
-				DEVELOPMENT_TEAM = CJCK5GUH74;
+				DEVELOPMENT_TEAM = LP26VPXL28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -471,7 +468,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.piperpal.api.ios.Piperpal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,7 +481,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CJCK5GUH74;
+				DEVELOPMENT_TEAM = LP26VPXL28;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -504,7 +501,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CJCK5GUH74;
+				DEVELOPMENT_TEAM = LP26VPXL28;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -523,7 +520,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CJCK5GUH74;
+				DEVELOPMENT_TEAM = LP26VPXL28;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.piperpal.api.ios.PiperpalUITests;
@@ -541,7 +538,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CJCK5GUH74;
+				DEVELOPMENT_TEAM = LP26VPXL28;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.piperpal.api.ios.PiperpalUITests;
